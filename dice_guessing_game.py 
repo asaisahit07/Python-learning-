@@ -1,0 +1,21 @@
+#this program is to create a dice guessing game where the user has to guess the number rolled by the dice. The program will generate a random number between 1 and 6, and the user will have a limited number of attempts to guess the correct number. If the user guesses correctly, they win; otherwise, they lose.
+
+print("---------Welcome to the dice guessing game!---------")
+user_guess=int(input("enter your choice between 1 to 6 :"))
+if(user_guess>6 or user_guess<1):
+    print("invalid number is choosen")
+else:    
+    print("user guess is =",user_guess)
+import random
+computer_guess=random.randint(1,6)
+print("computer guess is = ",computer_guess)
+if(user_guess==computer_guess):
+    print("you win")
+else:
+    print("you lose")
+print("checking if the computer guessed number is even or odd")
+if(computer_guess%2==0):
+    print("computer guessed number is even")
+else:
+    print("computer guessed number is odd")
+print("-------thank you for playing!-------")
